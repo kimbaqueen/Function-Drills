@@ -12,16 +12,26 @@
 */
 
 //CODE HERE
+function helloWorld() {
+  console.log("Hello, World!");
+};
+
+helloWorld();
 
 
 ////////////////// PROBLEM 2 ////////////////////
 
 /*
-    Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
+    Write an arrow function called 'jsNinja' that returns the string: 
+    'I am a JavaScript ninja!'
 */
 
 //CODE HERE
 
+const jsNinja = () => "I am a JavaScript ninja!";
+
+jsNinja();
+// string not being returned in terminal when arrow function is called
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -31,6 +41,11 @@
 */
 
 //CODE HERE
+const printName = (name) => {
+  console.log(name);
+};
+
+printName('Cameron');
 
 
 ////////////////// PROBLEM 4 ////////////////////
@@ -45,7 +60,11 @@
 */
 
 //CODE HERE
+const greeting = (name) => {
+  console.log(`Hello, ${name}`);
+};
 
+greeting('Jake');
 
 ////////////////// PROBLEM 5 ////////////////////
 
@@ -79,7 +98,7 @@
   Uncomment the answer underneath.
 */
 
-const exclaim = function(str) {
+const exclaim = function (str) {
   return str.toUpperCase() + '!!!'
 }
 
@@ -190,7 +209,7 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 
 ////////////////// PROBLEM 15 ////////////////////
-let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
+let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107]
 /* 
   Create a function called 'bigOrSmall' that takes in one parameter, 'arr',  which will be an array of numbers. 
   Inside of the bigOrSmall function, create a new array called 'answers'. 
@@ -253,7 +272,7 @@ let sampleString = "Hi, my name is Kylo."
 
 
 ////////////////// PROBLEM 21 ////////////////////
-let sampleArray = [0,1,2,3,4,7,5,6,8,9]
+let sampleArray = [0, 1, 2, 3, 4, 7, 5, 6, 8, 9]
 /*
   Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
