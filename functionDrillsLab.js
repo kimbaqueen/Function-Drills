@@ -14,7 +14,7 @@
 //CODE HERE
 function helloWorld() {
   console.log("Hello, World!");
-};
+}
 
 helloWorld();
 
@@ -31,7 +31,7 @@ helloWorld();
 const jsNinja = () => "I am a JavaScript ninja!";
 
 jsNinja();
-// string not being returned in terminal when arrow function is called
+// string not being returned in terminal when arrow function is called but works in chrome developer tool!!
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -43,7 +43,7 @@ jsNinja();
 //CODE HERE
 const printName = (name) => {
   console.log(name);
-};
+}
 
 printName('Cameron');
 
@@ -62,7 +62,7 @@ printName('Cameron');
 //CODE HERE
 const greeting = (name) => {
   console.log(`Hello, ${name}`);
-};
+}
 
 greeting('Jake');
 
@@ -78,7 +78,17 @@ greeting('Jake');
 */
 
 //CODE HERE
+const compareNums = (num1, num2) => {
+  if (num1 > num2) {
+    return num1;
+  } else if (num2 > num1) {
+    return num2;
+  } else {
+    return num1;
+  }
+}
 
+compareNums(3, 9);
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -90,6 +100,13 @@ greeting('Jake');
 
 //CODE HERE
 
+function add(param1, param2) {
+  return +param1 + +param2;
+}
+
+let sum = add(4, '9');
+
+console.log(sum);
 
 ////////////////// PROBLEM 7 ////////////////////
 
@@ -104,7 +121,7 @@ const exclaim = function (str) {
 
 // arrow
 // declaration
-// expression
+expression
 
 
 
@@ -119,7 +136,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// arrow
+arrow
 // declaration
 // expression
 
@@ -130,7 +147,11 @@ const exclaimTwo = str => {
   Brownie points if you use a template string
 */
 
+// const exclaimThree = (str) => str.toUpperCase() + '!!!';
 
+let exclaimThree = (string) => (`${string.toUpperCase} + '!!!'`);
+
+exclaimThree('Brownies');
 
 ////////////////// PROBLEM 9 ////////////////////
 
@@ -144,7 +165,7 @@ function exclaimFour(str) {
 }
 
 // arrow
-// declaration
+declaration
 // expression
 
 
@@ -158,6 +179,19 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+function nameCheck(name) {
+  if (name = "Steven") {
+    return 'What is up Steven';
+  } else if (name = "Bryan") {
+    return 'Hey Bryan!';
+  } else {
+    return 'Cool name, ' + name;
+  }
+}
+
+let nameGreeting = nameCheck('Kim');
+
+console.log(nameGreeting);
 
 
 ////////////////// PROBLEM 11 ////////////////////
