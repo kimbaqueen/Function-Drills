@@ -83,12 +83,11 @@ const compareNums = (num1, num2) => {
     return num1;
   } else if (num2 > num1) {
     return num2;
-  } else {
-    return num1;
   }
 }
 
-compareNums(3, 9);
+compareNums(3, 5);
+
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -100,8 +99,8 @@ compareNums(3, 9);
 
 //CODE HERE
 
-function add(param1, param2) {
-  return +param1 + +param2;
+function add(num1, num2) {
+  return +num1 + +num2;
 }
 
 let sum = add(4, '9');
@@ -143,13 +142,11 @@ arrow
 /*
   Rewrite exclaimTwo to be a single line.
   Call your new function exclaimThree
-
+ 
   Brownie points if you use a template string
 */
 
-// const exclaimThree = (str) => str.toUpperCase() + '!!!';
-
-let exclaimThree = (string) => (`${string.toUpperCase} + '!!!'`);
+let exclaimThree = str => `${str.toUpperCase()}!!!`;
 
 exclaimThree('Brownies');
 
@@ -180,9 +177,9 @@ declaration
 
 //CODE HERE
 function nameCheck(name) {
-  if (name = "Steven") {
+  if (name == "Steven") {
     return 'What is up Steven';
-  } else if (name = "Bryan") {
+  } else if (name == "Bryan") {
     return 'Hey Bryan!';
   } else {
     return 'Cool name, ' + name;
@@ -205,7 +202,20 @@ console.log(nameGreeting);
 */
 
 //CODE HERE
+function favColorFinder(color) {
+  if (color == 'red') {
+    return 'Red is a great color';
+  } else if (color == 'green') {
+    return 'greed is a solid favorite color';
+  } else if (color == 'black') {
+    return 'so trendy';
+  } else {
+    return 'you need to evaluate your favorite color choice';
+  }
+}
 
+let colorRating = favColorFinder('yellow');
+console.log(colorRating);
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -216,7 +226,13 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function printAllNames(names) {
+  for (let i = 0; i < names.length; i++) {
+    console.log([i]);
+  }
+}
 
+printAllNames(namesArr);
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
