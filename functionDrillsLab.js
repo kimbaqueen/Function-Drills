@@ -86,6 +86,13 @@ const compareNums = (num1, num2) => {
   }
 }
 
+//ternary coding example 
+//return num1 > num2 ? num1 : num2;
+
+//secret math way!
+//return Math.max (num1, num2);
+//array would dneed to add spread operator (...) for the math way to work
+
 compareNums(3, 5);
 
 
@@ -243,7 +250,16 @@ printAllNames(namesArr);
 */
 
 //CODE HERE
+function thatsOdd(number) {
+  if (number % 2 === 0) {
+    return "That's not odd!";
+  } else {
+    return "that is odd indeed!";
+  }
+}
 
+let oddChecker = thatsOdd(24);
+console.log(oddChecker);
 
 ////////////////// PROBLEM 14 ////////////////////
 
@@ -256,7 +272,11 @@ printAllNames(namesArr);
 */
 
 //CODE HERE
+const bestMovie = (movieParam) => `${movieParam} is the best movie ever!`;
 
+bestMovie('Titanic');
+// console.log(bestMovie['Titanic']);
+// can't get it to console log in VS code but in chrome developer snippet it works! 
 
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107]
@@ -270,17 +290,47 @@ let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+function bigOrSmall(arr) {
+  let answersArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      answersArray.push("big");
+    } else {
+      answersArray.push("small");
+    }
+  }
+  return answersArray;
+}
+
+let arrayEvaluator = bigOrSmall(bigOrSmallArray);
+console.log(arrayEvaluator);
 
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
 /*
-  Write a function that is called theEliminator, which takes in two arguments, contestants (which will each be an array of strings), and loser (which will be a string).
-  The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. Return the new contestants array.
+  Write a function that is called theEliminator, 
+  which takes in two arguments, contestants (which will each be an array of strings), and loser (which will be a string).
+  The function should loop over the array of contestant names. 
+  If the loser string appears in the array, splice it out. 
+  Return the new contestants array.
 */
 
 //CODE HERE
+
+function theEliminator(contestants, loser) {
+  for (let i = 0; i < contestants.length; i++) {
+    if (contestants[i] === loser) {
+      contestants.splice(i, 1);
+    }
+  }
+  return contestants;
+}
+
+let updatedContestants = theEliminator(contestants, loser);
+
+console.log(updatedContestants);
 
 
 ////////////////// PROBLEM 17 ////////////////////
@@ -306,13 +356,22 @@ let sampleString = "Hi, my name is Kylo."
 
 ////////////////// PROBLEM 19 ////////////////////
 /*
-  Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
+  Write a function, naming it whatever you believe to be appropriate, 
+  that buys as many chocolate frogs as possible with a certain amount of gold. 
+  Each chocolate frog costs 3 gold. Your function should take in a single parameter, 
+  which is the amount of gold you are willing to spend. 
+  Your function should return a total amount of chocolate frogs you were able to purchase.
   Create a variable called `totalFrogs` and set it equal to your function invoked, passing in the amount of gold you are willing to spend.
 */
 
 //CODE HERE
+function chocoFrogs(gold) {
+  return Math.floor(gold / 3);
+  //return amount of frogs I can purchase
+}
 
-
+const totalFrogs = chocoFrogs(20);
+console.log(totalFrogs);
 ////////////////// PROBLEM 20 ////////////////////
 /*
   You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
