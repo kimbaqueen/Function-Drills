@@ -120,7 +120,7 @@ const exclaim = function (str) {
 
 // arrow
 // declaration
-expression
+// expression ---- answer!
 
 
 
@@ -135,7 +135,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-arrow
+// arrow ---- answer!!
 // declaration
 // expression
 
@@ -162,7 +162,7 @@ function exclaimFour(str) {
 }
 
 // arrow
-declaration
+// declaration ----- answer!
 // expression
 
 
@@ -228,7 +228,7 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 //CODE HERE
 function printAllNames(names) {
   for (let i = 0; i < names.length; i++) {
-    console.log([i]);
+    console.log(names[i]);
   }
 }
 
