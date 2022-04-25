@@ -342,6 +342,12 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
+function upperCaseConverter(str) {
+  console.log(str.toUpperCase());
+}
+
+upperCaseConverter(sampleString);
+
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -353,6 +359,20 @@ let sampleString = "Hi, my name is Kylo."
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
+
+//CODE HERE
+function emailCheck(email) {
+  email = String(email).trim();
+
+  if (email.includes('@')) {
+    return 'email verified';
+  } else {
+    return 'must proide a valid email address';
+  }
+}
+
+emailCheck('123@gmail.com');
+console.log(emailCheck('123@gmail.com'));
 
 ////////////////// PROBLEM 19 ////////////////////
 /*
@@ -374,19 +394,49 @@ const totalFrogs = chocoFrogs(20);
 console.log(totalFrogs);
 ////////////////// PROBLEM 20 ////////////////////
 /*
-  You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
+  You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... 
+  However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. 
+  Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. 
+  Invoke the function and store the returned value to a variable called `totalFrogs2`.
 */
 
 //CODE HERE
+function frogPurchaser2(gold) {
+  if (gold % 3 === 0) {
+    return gold / 3;
+  } else if ((gold - 1) % 3 === 0) {
+    return (gold - 1) / 3;
+  } else {
+    return (gold - 2) / 3;
+  }
+}
 
+let totalFrogs2 = frogPurchaser2(100);
 
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0, 1, 2, 3, 4, 7, 5, 6, 8, 9]
 /*
-  Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
+  Write a function that takes in an array of numbers as an argument. 
+  In the body of the function, write logic to determine if the array is in ascending order. 
+  The function should return true, if it is sorted in ascending order, false if it is not. 
+  Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
 
 //CODE HERE
+function ascendingArrayTester(arr) {
+  let comparisonValue = arr[0];
+  for (let i = 1; i < arr.length - 1; i++) {
+    if (arr[i] <= comparisonValue) {
+      return false;
+    } else {
+      comparisonValue = arr[i];
+    }
+  } return true;
+}
+
+let arrayIsAscending = ascendingArrayTester(sampleArray);
+
+console.log(arrayIsAscending);
 
 
 ////////////////// PROBLEM 22 ////////////////////
@@ -411,13 +461,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ['duck'];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ['duck', 'rubberDuck'];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ['duck', 'sailorDuck', 'rubberDuck'];
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ['duck', 'realDuck'];
